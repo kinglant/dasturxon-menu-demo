@@ -1,0 +1,27 @@
+{
+  "categories": [
+    {"id": "salat", "name": "Salatlar", "emoji": "🥗"},
+    {"id": "taom", "name": "Milliy taomlar", "emoji": "🍲"},
+    {"id": "somsa", "name": "Somsa va xamir", "emoji": "🥟"},
+    {"id": "grill", "name": "Kabob va grill", "emoji": "🍢"},
+    {"id": "ichimlik", "name": "Ichimliklar", "emoji": "🫖"}
+  ],
+  "items": [
+    {"id": 1, "cat": "salat", "name": "Achchiq-chuchuk", "desc": "Pomidor, piyoz, achchiq qalampir", "price": 18000, "emoji": "🍅"},
+    {"id": 2, "cat": "salat", "name": "Olivye", "desc": "Klassik retsept, mol go'shti bilan", "price": 32000, "emoji": "🥗"},
+    {"id": 3, "cat": "salat", "name": "Toshkent salati", "desc": "Turp, go'sht, tuxum, qovurilgan piyoz", "price": 35000, "emoji": "🥙"},
+    {"id": 4, "cat": "taom", "name": "To'y oshi", "desc": "Qazi, bedana tuxumi, devzira guruch", "price": 55000, "emoji": "🍚"},
+    {"id": 5, "cat": "taom", "name": "Lag'mon", "desc": "Qo'lda cho'zilgan xamir, mol go'shti", "price": 38000, "emoji": "🍜"},
+    {"id": 6, "cat": "taom", "name": "Qozon kabob", "desc": "Qo'y go'shti, kartoshka, ko'katlar", "price": 75000, "emoji": "🥘"},
+    {"id": 7, "cat": "taom", "name": "Mastava", "desc": "Guruchli sho'rva, qatiq bilan", "price": 28000, "emoji": "🍲"},
+    {"id": 8, "cat": "somsa", "name": "Tandir somsa", "desc": "Qo'y go'shti va dumba", "price": 12000, "emoji": "🥟"},
+    {"id": 9, "cat": "somsa", "name": "Manti (5 dona)", "desc": "Bug'da pishirilgan, qatiq bilan", "price": 35000, "emoji": "🥟"},
+    {"id": 10, "cat": "somsa", "name": "Chuchvara", "desc": "Qaynatma yoki qovurilgan", "price": 30000, "emoji": "🥟"},
+    {"id": 11, "cat": "grill", "name": "Jiz kabob", "desc": "Qo'y go'shti, 1 porsiya", "price": 25000, "emoji": "🍢"},
+    {"id": 12, "cat": "grill", "name": "Lyulya kabob", "desc": "Mol go'shti qiymasi", "price": 22000, "emoji": "🍢"},
+    {"id": 13, "cat": "grill", "name": "Tovuq qanoti", "desc": "Marinadlangan, 6 dona", "price": 40000, "emoji": "🍗"},
+    {"id": 14, "cat": "ichimlik", "name": "Ko'k choy", "desc": "Choynakda", "price": 8000, "emoji": "🫖"},
+    {"id": 15, "cat": "ichimlik", "name": "Kompot", "desc": "Uy kompoti, 1 litr", "price": 20000, "emoji": "🍹"},
+    {"id": 16, "cat": "ichimlik", "name": "Ayron", "desc": "Sovuq, yalpiz bilan", "price": 12000, "emoji": "🥛"}
+  ]
+}

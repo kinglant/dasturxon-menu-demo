@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Dasturxon Menyu</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #b8894a;
+    --gold-dark: #8f6a35;
+    --gold-soft: #ead9bb;
+    --cream: #f8f3ea;
+    --card: #ffffff;
+    --ink: #1c1a17;
+    --muted: #7a7266;
+    --line: #e6dccb;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; background: var(--cream); color: var(--ink);
+    font-family: "Manrope", system-ui, sans-serif; }
+  body { padding-bottom: 96px; }
+
+  header { text-align: center; padding: 22px 16px 14px; background: var(--card);
+    border-bottom: 1px solid var(--line); }
+  .logo { display: inline-flex; align-items: center; gap: 10px; }
+  .logo svg { width: 46px; height: 46px; }
+  .logo-text { text-align: left; line-height: 1; }
+  .logo-name { font-family: "Great Vibes", cursive; font-size: 40px; color: var(--ink); }
+  .logo-sub { font-size: 9.5px; letter-spacing: 1.6px; font-weight: 600; color: var(--ink); margin-top: 2px; }
+  .tagline { margin: 10px 0 0; color: var(--muted); font-size: 13px; }
+
+  .cats { position: sticky; top: 0; z-index: 5; display: flex; gap: 8px; overflow-x: auto;
+    padding: 12px 16px; background: var(--cream); scrollbar-width: none; }
+  .cats::-webkit-scrollbar { display: none; }
+  .chip { flex: none; border: 1px solid var(--gold); background: transparent; color: var(--gold-dark);
+    padding: 8px 14px; border-radius: 999px; font: 600 13px "Manrope", sans-serif; cursor: pointer; }
+  .chip.active { background: var(--gold); color: #fff; }
+
+  section { padding: 4px 16px 8px; }
+  h2 { font-family: "Great Vibes", cursive; font-weight: 400; font-size: 32px; margin: 14px 0 8px;
+    color: var(--gold-dark); display: flex; align-items: center; gap: 10px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--gold-soft); }
+
+  .item { display: flex; gap: 12px; align-items: center; background: var(--card);
+    border: 1px solid var(--line); border-radius: 16px; padding: 12px; margin-bottom: 10px; }
+  .pic { flex: none; width: 64px; height: 64px; border-radius: 14px; display: grid; place-items: center;
+    font-size: 34px; background: radial-gradient(circle at 30% 30%, #fff, var(--gold-soft)); border: 1px solid var(--gold-soft); }
+  .info { flex: 1; min-width: 0; }
+  .name { font-weight: 700; font-size: 15px; }
+  .desc { color: var(--muted); font-size: 12.5px; margin: 2px 0 6px; }
+  .price { font-weight: 700; color: var(--gold-dark); font-size: 14px; }
+
+  .add { border: none; background: var(--gold); color: #fff; font: 700 13px "Manrope", sans-serif;
+    padding: 9px 14px; border-radius: 12px; cursor: pointer; }
+  .stepper { display: flex; align-items: center; gap: 8px; }
+  .stepper button { width: 32px; height: 32px; border-radius: 10px; border: 1px solid var(--gold);
+    background: #fff; color: var(--gold-dark); font-size: 18px; font-weight: 700; cursor: pointer; }
+  .stepper span { min-width: 18px; text-align: center; font-weight: 700; }
+
+  .note { text-align: center; color: var(--muted); font-size: 11px; padding: 10px 16px 0; }
+
+  /* Brauzerda ko'rish uchun (Telegram'dan tashqarida) */
+  .fallback-bar { position: fixed; left: 0; right: 0; bottom: 0; padding: 12px 16px 16px;
+    background: linear-gradient(transparent, var(--cream) 30%); display: none; }
+  .fallback-bar button { width: 100%; border: none; border-radius: 14px; padding: 15px;
+    background: var(--ink); color: #fff; font: 700 15px "Manrope", sans-serif; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <g fill="none" stroke="#b8894a" stroke-width="3">
+        <circle cx="50" cy="50" r="12"/>
+        <g id="petal"><path d="M50 36 C42 26 42 14 50 6 C58 14 58 26 50 36 Z"/></g>
+        <use href="#petal" transform="rotate(45 50 50)"/>
+        <use href="#petal" transform="rotate(90 50 50)"/>
+        <use href="#petal" transform="rotate(135 50 50)"/>
+        <use href="#petal" transform="rotate(180 50 50)"/>
+        <use href="#petal" transform="rotate(225 50 50)"/>
+        <use href="#petal" transform="rotate(270 50 50)"/>
+        <use href="#petal" transform="rotate(315 50 50)"/>
+      </g>
+      <circle cx="50" cy="50" r="4" fill="#b8894a"/>
+    </svg>
+    <div class="logo-text">
+      <div class="logo-name">Dasturxon</div>
+      <div class="logo-sub">NATIONAL FOOD RESTAURANT</div>
+    </div>
+  </div>
+  <p class="tagline">Eng shirin milliy taomlar — uyingizgacha 🛵</p>
+</header>
+
+<nav class="cats" id="cats"></nav>
+<main id="menu"></main>
+<p class="note">Demo versiya · narxlar namuna sifatida ko'rsatilgan</p>
+
+<div class="fallback-bar" id="fallbackBar"><button id="fallbackBtn"></button></div>
+
+<script>
+const tg = window.Telegram && window.Telegram.WebApp;
+const inTelegram = !!(tg && tg.initData);
+const cart = {};           // id -> soni
+let menu = { categories: [], items: [] };
+
+const fmt = n => n.toLocaleString("ru-RU").replace(/,/g, " ") + " so'm";
+
+function total() {
+  return menu.items.reduce((s, it) => s + (cart[it.id] || 0) * it.price, 0);
+}
+
+function renderControls(it) {
+  const q = cart[it.id] || 0;
+  if (!q) return `<button class="add" data-add="${it.id}">Qo'shish</button>`;
+  return `<div class="stepper">
+    <button data-minus="${it.id}" aria-label="Kamaytirish">−</button>
+    <span>${q}</span>
+    <button data-add="${it.id}" aria-label="Ko'paytirish">+</button>
+  </div>`;
+}
+
+function render() {
+  document.getElementById("cats").innerHTML = menu.categories.map((c, i) =>
+    `<button class="chip${i === 0 ? " active" : ""}" data-cat="${c.id}">${c.emoji} ${c.name}</button>`).join("");
+
+  document.getElementById("menu").innerHTML = menu.categories.map(c => `
+    <section id="cat-${c.id}">
+      <h2>${c.name}</h2>
+      ${menu.items.filter(it => it.cat === c.id).map(it => `
+        <div class="item">
+          <div class="pic">${it.emoji}</div>
+          <div class="info">
+            <div class="name">${it.name}</div>
+            <div class="desc">${it.desc}</div>
+            <div class="price">${fmt(it.price)}</div>
+          </div>
+          <div class="ctl" id="ctl-${it.id}">${renderControls(it)}</div>
+        </div>`).join("")}
+    </section>`).join("");
+}
+
+function updateItem(id) {
+  const it = menu.items.find(x => x.id === id);
+  document.getElementById("ctl-" + id).innerHTML = renderControls(it);
+  updateMainButton();
+}
+
+function updateMainButton() {
+  const t = total();
+  const text = `Buyurtma berish · ${fmt(t)}`;
+  if (inTelegram) {
+    if (t > 0) { tg.MainButton.setText(text); tg.MainButton.show(); }
+    else tg.MainButton.hide();
+  } else {
+    const bar = document.getElementById("fallbackBar");
+    bar.style.display = t > 0 ? "block" : "none";
+    document.getElementById("fallbackBtn").textContent = text;
+  }
+}
+
+function submitOrder() {
+  const items = Object.entries(cart).filter(([, q]) => q > 0).map(([id, q]) => [Number(id), q]);
+  if (!items.length) return;
+  const payload = JSON.stringify({ items });
+  if (inTelegram) tg.sendData(payload);   // botga yuboradi va oynani yopadi
+  else alert("Telegram ichida bu buyurtma botga yuboriladi:\n" + payload);
+}
+
+document.addEventListener("click", e => {
+  const add = e.target.closest("[data-add]");
+  const minus = e.target.closest("[data-minus]");
+  const chip = e.target.closest("[data-cat]");
+  if (add) {
+    const id = Number(add.dataset.add);
+    cart[id] = (cart[id] || 0) + 1;
+    updateItem(id);
+    if (inTelegram) tg.HapticFeedback.impactOccurred("light");
+  } else if (minus) {
+    const id = Number(minus.dataset.minus);
+    cart[id] = Math.max(0, (cart[id] || 0) - 1);
+    updateItem(id);
+  } else if (chip) {
+    document.querySelectorAll(".chip").forEach(c => c.classList.toggle("active", c === chip));
+    const target = document.getElementById("cat-" + chip.dataset.cat);
+    window.scrollTo({ top: target.offsetTop - 60, behavior: "smooth" });
+  }
+});
+document.getElementById("fallbackBtn").addEventListener("click", submitOrder);
+
+if (inTelegram) {
+  tg.ready();
+  tg.expand();
+  tg.setHeaderColor("#ffffff");
+  tg.setBackgroundColor("#f8f3ea");
+  tg.MainButton.color = "#1c1a17";
+  tg.MainButton.textColor = "#ffffff";
+  tg.MainButton.onClick(submitOrder);
+}
+
+fetch("menu.json")
+  .then(r => r.json())
+  .then(data => { menu = data; render(); updateMainButton(); })
+  .catch(() => { document.getElementById("menu").innerHTML =
+    '<p class="note">Menyuni yuklab bo\'lmadi.</p>'; });
+</script>
+</body>
+</html>
